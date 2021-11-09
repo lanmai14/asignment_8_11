@@ -12,7 +12,7 @@
     />
 
     <title>Zodinet Training JavaScript | Tip calculator app</title>
-    <link rel="stylesheet" href="sass/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.google.com/specimen/Space+Monox"
@@ -26,52 +26,41 @@
       </p>
       <div class="box">
         <div class="box__bill">
-          <p>Bill</p>
-          <input id="value" type="number" />
+          <div class="box__value">
+            <p>Bill</p>
+            <input id="value" type="number" placeholder="0" />
+            <img src="images/icon-dollar.svg" alt="" />
+          </div>
+
           <p class="text__one">Select Tip %</p>
           <div class="box__percent">
-            <div class="box__percent__5">
-              <p input type="button" id="percent_5" onclick="Choose_five()">
-                5%
-              </p>
-            </div>
-            <div class="box__percent__10">
-              <p id="percent_10" onclick="Choose_ten()">10%</p>
-            </div>
-            <div class="box__percent__15">
-              <p id="percent_15" onclick="Choose_persent_15()">15%</p>
-            </div>
-            <div class="box__percent__20">
-              <p id="percent_20" onclick="Choose_persent_20()">20%</p>
-            </div>
-            <div class="box__percent__25">
-              <p id="percent_25" onclick="Choose_persent_25()">25%</p>
-            </div>
-            <div class="box__percent__custom">
-              <p id="percent_custom" onclick="Choose_persent_custom()">
-                Custom
-              </p>
-            </div>
+            <button class="button__tip" id="percent_5">5%</button>
+            <button class="button__tip" id="percent_10">10%</button>
+            <button class="button__tip" id="percent_15">15%</button>
+            <button class="button__tip" id="percent_20">20%</button>
+            <button class="button__tip" id="percent_25">25%</button>
+            <input type ="number" class="custom" id="percent_custom">
+        
+            </input>
           </div>
           <div class="number__of__people">
             <p>Number of people</p>
-            <input id="value_person" type="text" class="" value="" />
+            <input id="value_person" type="number" placeholder="0" />
           </div>
         </div>
         <div class="box__caculator">
           <div class="box__tip">
             <p>Tip Amount</p>
-            <span id="show__tip"></span>
+            <span id="show__tip" >0</span>
           </div>
           <div class="box__total">
             <p>Total</p>
-            <span id="show__amount"></span>
+            <span id="show__amount">0</span>
           </div>
-          <button id="a" onclick="Reset()">Reset</button>
-          <button id="b" onclick="Calculate()">Calculate</button>
+          <button id="reset" onclick="Reset()">Reset</button>
         </div>
       </div>
     </div>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
